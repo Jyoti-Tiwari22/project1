@@ -5,62 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pro.scss">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="http://fonts.cdnfonts.com/css/adobe-clean" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="nav">
         <a class="navbar-brand" href="#">The IT Company</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto" style="position: relative;">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Work</a>
+              <a class="nav-link" href="#Work">Work</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#home" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ONCLICK="ShowAndHide()">
                 Services
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+              <div class="mega-menu" ID="SectionName" STYLE="display:none">
+                <div class="inner-menu">
+                  <ul>
+                    <li><i class="fa fa-mobile"></i><a>Mobile App Development</a></li>
+                    <li><i class="fa fa-laptop"></i><a>Web Development</a></li>
+                    <li><i class="fa fa-user"></i><a>Backend Development</a></li>
+                    <li><i class="fa fa-user-plus"></i><a>Embedded System</a></li>
+                    <li><i class="fa fa-user-secret"></i><a>MML/AL</a></li>
+                    <li><i class="fa fa-user-circle"></i><a>Video Streaming services</a></li>
+                  </ul>
+                </div>
+                <div class="inner-menu">
+                  <ul>
+                    <li><i class="fa fa-user-circle"></i><a>Fintech</a></li>
+                    <li><i class="fa fa-user-secret"></i><a>UI/UX Development</a></li>
+                    <li><i class="fa fa-mobile"></i><a>Graphic Design $ Content Development</a></li>
+                    <li><i class="fa fa-laptop"></i><a>SEO & SMO</a></li>
+                    <li><i class="fa fa-user-secret"></i><a>MML/AL</a></li>
+                    <li><i class="fa fa-mobile"></i><a>Video Streaming services</a></li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">About</a>
+              <a class="nav-link disabled" href="#About">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Startups</a>
+                <a class="nav-link disabled" href="#Startups">Startups</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Let's Talk</a>
+                <a class="nav-link disabled" href="#Talk">Let's Talk</a>
             </li>
           </ul>
         </div>
       </nav>
+      <div class="header-banner">
+
+      </div>
       <section>
-          <div class="section-home">
+          <div class="section-home sections" id="home">
               <div class="section-pa">
                   <h1 class="home-heading">
                       We are a Modern IT Company
                   </h1>
                   <p class="home-pa">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                  <div class="scroll-down"></div>
+                  <a class="scroll-down" href="#footer"></a>
               </div>
           </div>
       </section>
       <section>
-          <div class="container">
+          <div class="container sections" id="Work">
                 <div class="row gap-100">
                     <div class="col-md-5" >
                         <div class="cross-text">
@@ -78,68 +101,86 @@
             </div>
       </section>
       <section>
-        <div class="jumbotron" style="background-color: #fff;">
+        <div class="jumbotron sections" style="background-color: #fff;" id="About">
             <h2 class="profile-h2">Leadership Team.</h2>
             <div class="row" style="margin-right: 0px;">
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4">
                   <div class="card" style="width: 18rem; border: none;">
                       <img class="card-img-top" src="/image/profil1.jpeg" alt="Card image cap" style="height: 300px; border-radius: 35px;">
                       <div class="card-body">
-                        <h5 class="profile-card">Name</h5>
-                        <p class="profile-text">Ceo, Founder</p>
-                        <p>Linkdin</p>
+                        <div>
+                          <h5 class="profile-card">Name</h5>
+                          <p class="profile-text">Ceo, Founder</p>
+                        </div>
+                        <div class="social-p">
+                            <p>Linkdin</p>
+                        </div>
                       </div>
+                      <hr class="hr-social">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4">
                   <div class="card" style="width: 18rem; border: none;">
                       <img class="card-img-top" src="/image/profil1.jpeg" alt="Card image cap" style="height: 300px; border-radius: 35px;">
                       <div class="card-body">
-                        <h5 class="profile-card">Name</h5>
-                        <p class="profile-text">Ceo, Founder</p>
-                        <p>Linkdin</p>
+                        <div>
+                          <h5 class="profile-card">Name</h5>
+                          <p class="profile-text">Ceo, Founder</p>
+                        </div>
+                        <div class="social-p">
+                            <p>Linkdin</p>
+                        </div>
                       </div>
+                      <hr class="hr-social">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-sm-12 col-lg-4">
                   <div class="card" style="width: 18rem; border: none;">
                       <img class="card-img-top" src="/image/profil1.jpeg" alt="Card image cap" style="height: 300px; border-radius: 35px;">
                       <div class="card-body">
-                        <h5 class="profile-card">Name</h5>
-                        <p class="profile-text">Ceo, Founder</p>
-                        <p>Linkdin</p>
+                        <div>
+                          <h5 class="profile-card">Name</h5>
+                          <p class="profile-text">Ceo, Founder</p>
+                        </div>
+                        <div class="social-p">
+                            <p>Linkdin</p>
+                        </div>
                       </div>
+                      <hr class="hr-social">
                     </div>
                 </div>
             </div>
         </div>
         
     </section>
-    <section>
-        <div class="container">
-            <span class="our-span">Our people</span>
-            <h1 class="our-h1">Our people</h1>
+   <section>
+      <div class="container sections" id="Startups">
+          <span class="our-span">Our people</span>
+          <h1 class="our-h1">Our people</h1>
 
+      </div>
+      <div class="jumbotron" style="background-color: #fff;">
+        <div class="carousel" data-flickity >
+          <div class="carousel-cell">
+              <img src="/image/home2.jpg" alt="">
+          </div>
+          <div class="carousel-cell active">
+            <img src="/image/impact.jpg" alt="">
+          </div>
+          <div class="carousel-cell"> 
+            <img src="/image/home3.jpg" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="/image/impact.jpg" alt="">
+          </div>
         </div>
-        
-        <div class="container" style="display: flex;">
-            <div class="slide js-slide">
-                <div class="slide__bg">
-                    <img src="/image/home3.jpg" alt="">
-                </div>
-            </div>
-            <div class="slide js-slide">
-                <div class="slide__bg">
-                    <img src="/image/home4.jpg" alt=""></div>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
     <section>
-        <div style="width:100vw; min-height:200px ;align-items: center;">
+        <div style="min-height:200px ;align-items: center;" id="Talk" class="sections">
             <div class="container">
               <div class="row gx-2">
-                <div class="col-sm-12 col-md-7" style="padding: 50px 60px;">
+                <div class="col-sm-12 col-md-7 feel-contact" style="padding: 50px 60px;">
                   <h3 class="with-h3">Feel free to get in touch with Us</h3>
                   <span class="with-span">
                   If you have an idea lets dicuss it and share view and thoughts on it and share view and thoughts on it.
@@ -159,8 +200,8 @@
               </div>
             </div>
           </div>
-        <footer style="width:100vw;min-height: 400px;padding: 20px;background:black">
-            <div class="container px-4 py-4">
+        <footer style="min-height: 400px;padding: 20px;background:black">
+            <div class="container px-4 py-4" id="footer">
                 <div class="row gx-5">
                   <div class="col-sm-12 col-md-6 py-2">
                    <div class="p-2 "  style="color:#fff">       
@@ -176,16 +217,17 @@
                   </div>
                   <div class="col-sm-12 col-md-6 py-1 " >
                     <div class="p-2 "  style="color:#fff"><h5><strong>Follow us at</strong></h5><br/>
-                        <div class="row col-8"><div class="col">
+                        <div class="row col-sm-12 follow-social">
+                          <div class="col-md-2 col-sm-2">
                             <i class="fa fa-facebook-official" style="font-size:24px;color:#fff"></i>
-                        </div>
-                        <div class="col">
-                            <i class="fa fa-instagram" style="font-size:24px;color:#fff"></i>
-                        </div>
-                        <div class="col">
-                            <i class="fa fa-twitter" style="font-size:24px;color:#fff;"></i>
-                        </div>
-                        <div class="col">
+                          </div>
+                          <div class="col-md-2 col-sm-2">
+                              <i class="fa fa-instagram" style="font-size:24px;color:#fff"></i>
+                          </div>
+                          <div class="col-md-2 col-sm-2">
+                              <i class="fa fa-twitter" style="font-size:24px;color:#fff;"></i>
+                          </div>
+                        <div class="col-md-2 col-sm-3">
                             <i class="	fa fa-linkedin-square" style="font-size:24px;color:#fff;"></i>
                         </div>
                     </div>
@@ -196,22 +238,23 @@
                     <div class="p-2"  style="color:#fff">
                     <strong>Explore</strong>
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-12 col-sm-12">
                             <b>Home</b>
                         </div>
-                        <div class="col">
+                        <div class="col-md-12 col-sm-12">
                             <b> Service</b>
                         </div>
-                        <div class="col">
+                        <div class="col-md-12 col-sm-12">
                             <b> About</b>
                         </div>
-                        <div class="col">
+                        <div class="col-md-12 col-sm-12">
                             <b> Contact</b>
                         </div>
                         
                     </div>
                     <p style="color:#444646">Dump Address</p>
                     </div>
+                    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up fa-2x" style="color: blue;"></i></button>
                   </div>
                 </div>
                 <hr color="#fff">
@@ -220,7 +263,9 @@
         
           </footer>
     </section>
-      <script src="/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>
